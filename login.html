@@ -1,0 +1,31 @@
+<div class="row">
+    <div id="page-signin" class="panel">
+      <div>
+        <form class="pure-form" onsubmit="loginButtonClick(); return false;">
+          <div class="radioList" id="radioGroup">
+            <ul id="playerType">
+              <li>
+                <input name="radio" id="spectator" type="radio" />
+                <label for="spectator">I'm a SPECTATOR</label>
+              </li>
+              <li>
+                <input name="radio" id="player" type="radio" />
+                <label for="player">I'm a PLAYER</label>
+              </li>
+            </ul>
+          </div>
+          <div id="passwordGrop" class="pure-control-group">
+            <label for="name" class="text-signin">PASSWORD</label>
+            <input id="password" class="inlineinput" type="password" placeholder="ENTER PASSWORD" maxlength="25" value="" autocorrect="off" autocomplete="off" />
+          </div>
+          <div class="pure-u-2-3 pull-right">
+            <div style="margin-left:5px; margin-right:5px;">
+              <section class="flat">
+                <button type="button" id="join" class="button-med pull-right">JOIN</button>
+              </section>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

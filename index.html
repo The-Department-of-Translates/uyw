@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Use Your Words!</title>
+        <meta name="description" content="">
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="images/favicon.ico">
+        <meta name="viewport" content="minimal-ui width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="css/theme.css">
+    </head>
+    <body>
+        <!--[if lte IE 9]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please 
+                <a href="http://browsehappy.com/">upgrade your browser</a> or 
+                <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> 
+                to improve your experience.</p><![endif]--> 
+        <noscript>
+            <h3 style="color: white;">ERROR: Javascript must be enabled to play. Please enable Javascript in your browser's settings and reload the page.</h3>
+        </noscript>
+        <div id="header">
+            <img src="img/logo.png" class="img-responsive center-block" vspace="30"/>
+            <div id="container" class="container"></div>
+            <div id="footer">
+                <p style="color: white; margin-top: 8%;">VERSION 1.0.0</p>
+                <a href="http://www.smilingbuddhagames.com/help/#browser" target="_blank">
+                    <p class="pull-right" style="color: #e4e0e8; text-decoration: underline;">Having trouble?</p>
+                </a>
+                <p style="color: pink; font-weight: bold;" id="socketError">ERROR: Cannot reach server. Please check connectivity or Wi-Fi status.</p>
+            </div>
+        </div>
+        <script src="js/socket.io-1.4.5.js"></script>
+        <script async src="//twemoji.maxcdn.com/2/twemoji.min.js?2.2.3"></script>
+        <script defer src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script defer src="//cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script defer src="js/game/main.js"></script>
+    </body>
+</html>
