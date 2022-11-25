@@ -1,14 +1,14 @@
 @font-face {
     font-family: "BrandonGrotesque-Medium";
-    src: url("https://burandby.github.io/burstrashcan/fonts/Brandon_Grotesque_Medium_cyrillic_UA_BY_Kuem.ttf") format("truetype");
+    src: url("https://burandby.github.io/burstrashcan/Brandon_Grotesque_Medium_cyrillic_UA_BY_Kuem.ttf") format("truetype");
   }
   @font-face {
     font-family: "BrandonGrotesque-Bold";
-    src: url("https://burandby.github.io/burstrashcan/fonts/BrandonText-Black_RUS_by_KanycTa-1_UA_BY_Kuem.ttf") format("truetype");
+    src: url("https://burandby.github.io/burstrashcan/BrandonText-Black_RUS_by_KanycTa-1_UA_BY_Kuem.ttf") format("truetype");
   }
   @font-face {
     font-family: "BrandonGrotesque";
-    src: url("https://burandby.github.io/burstrashcan/fonts/BrandonGrotesque-Regular.otf") format("truetype");
+    src: url("https://burandby.github.io/burstrashcan/BrandonGrotesque-Regular.otf") format("truetype");
   }
   img.emoji {
     height: 1em;
