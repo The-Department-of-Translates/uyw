@@ -2,7 +2,7 @@ function onEnterClick() {
 	var a = $("#answer").val();
 	a = a.trim();
 	if (a.length == 0) {
-		alert("Answers can't be empty!");
+		alert("Ответ не может быть пустым! ");
 		return
 	}
 	$("#button-enter").prop("disabled", true);
@@ -13,7 +13,7 @@ function onEnterClick() {
 		userID: $.cookie("userID"),
 		id: socket.id
 	});
-	goToWaiting("WAITING")
+	goToWaiting("ОЖИДАЕМ")
 }
 
 function onPuntClick() {
@@ -24,7 +24,7 @@ function onPuntClick() {
 		userID: $.cookie("userID"),
 		id: socket.id
 	});
-	goToWaiting("WAITING")
+	goToWaiting("ОЖИДАЕМ")
 }
 
 function loadOptions(a) {
