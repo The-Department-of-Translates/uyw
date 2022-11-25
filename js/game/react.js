@@ -2,7 +2,7 @@ function onReactClick() {
 	var a = $("#answers input[name=answer]:checked");
 	var b = $("#reactions input[name=reaction]:checked");
 	if (a.length <= 0 || b.length <= 0) {
-		alert("No reaction selected!");
+		alert("Никак не отреагировали!");
 		return
 	}
 	$("#button-enter").prop("disabled", true);
@@ -13,13 +13,13 @@ function onReactClick() {
 		room: $.cookie("roomcode"),
 		id: socket.id
 	});
-	goToWaiting("WAITING FOR NEXT ROUND...")
+	goToWaiting("ЖДЁМ СЛЕДУЮЩЕГО РАУНДА...")
 }
 
 function onPassClick() {
 	$("#button-enter").prop("disabled", true);
 	$("#button-pass").prop("disabled", true);
-	goToWaiting("WAITING FOR NEXT ROUND...")
+	goToWaiting("ЖДЁМ СЛЕДУЮЩЕГО РАУНДА...")
 }
 
 function loadOptions(e) {
