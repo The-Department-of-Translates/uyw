@@ -1,7 +1,7 @@
 function onVoteClick() {
 	var a = $("#votes input[type='radio']:checked");
 	if (a.length <= 0) {
-		alert("No vote selected!");
+		alert("Ничего не выбрано!");
 		return
 	}
 	$("#button-enter").prop("disabled", true);
@@ -11,7 +11,7 @@ function onVoteClick() {
 		userID: $.cookie("userID"),
 		id: socket.id
 	});
-	goToWaiting("WAITING")
+	goToWaiting("ОЖИДАЕМ")
 }
 
 function loadOptions(e) {
