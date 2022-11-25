@@ -80,7 +80,7 @@ function connectSocket(a) {
 	});
 	socket.on("server.invalidRoom", function(b) {
 		if (b === socket.id) {
-			alert("Incorrect or non-existent room code!");
+			alert("Неправильный или несуществующий код комнаты!");
 			socket.close();
 			$("#join").prop("disabled", false)
 		}
@@ -88,7 +88,7 @@ function connectSocket(a) {
 	socket.on("server.correctRoom", function(b) {
 		if (b.id === socket.id) {
 			$.cookie(CONST_ROOMCODE_COOKIE, b.room.toUpperCase());
-			goToWaiting("WAITING");
+			goToWaiting("ОЖИДАЕМ");
 			socket.emit("user.requestUserState", {
 				room: b.room.toUpperCase(),
 				id: socket.id
@@ -96,7 +96,7 @@ function connectSocket(a) {
 		}
 	});
 	socket.on("game.disconnect", function() {
-		alert("Room has disconnected!");
+		alert("Вы были отключены!");
 		$.removeCookie(CONST_ROOMCODE_COOKIE);
 		$.removeCookie(CONST_USERID_COOKIE);
 		$.removeCookie(CONST_ISSPECTATOR_COOKIE);
@@ -117,7 +117,7 @@ function connectSocket(a) {
 	});
 	socket.on("game.spectatorJoinSuccess", function(b) {
 		$.cookie(CONST_ISSPECTATOR_COOKIE, true);
-		goToWaiting("WAIT FOR PLAYER ANSWERS...")
+		goToWaiting("ЖДЁМ ОТВЕТОВ ИГРОКОВ...")
 	});
 	socket.on("game.userJoinFailure", function(b) {
 		alert(b.message);
@@ -126,7 +126,7 @@ function connectSocket(a) {
 		window.location.replace("index.html")
 	});
 	socket.on("game.goToWaiting", function(b) {
-		goToWaiting("WAITING")
+		goToWaiting("ОЖИДАЕМ")
 	});
 	socket.on("game.requestInput", function(b) {
 		loadContainer("input", function() {
