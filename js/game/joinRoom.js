@@ -23,7 +23,7 @@ function joinButtonClick() {
 			id: socket.id
 		})
 	}
-	goToWaiting("START ONCE EVERYONE'S IN!")
+	goToWaiting("НАЧИНАЙТЕ, КОГДА ВСЕ ЗАЙДУТ!")
 }
 
 function loadOptions(k) {
@@ -41,10 +41,10 @@ function loadOptions(k) {
 				continue
 			}
 			d.push(l);
-			var f = '<li><input name="radio" id="' + l + '" type="radio" /><label for="' + l + '">' + g + " (" + j + " Points)</label></li>";
+			var f = '<li><input name="radio" id="' + l + '" type="radio" /><label for="' + l + '">' + g + " (" + j + " Очков)</label></li>";
 			b.html(b.html() + f)
 		}
-		b.html(b.html() + '<li><input name="radio" id="newUser" type="radio" /><label for="newUser">New Player</label></li>');
+		b.html(b.html() + '<li><input name="radio" id="newUser" type="radio" /><label for="newUser">Новый игрок</label></li>');
 		nameInput.prop("disabled", true);
 		joinButton.prop("disabled", true);
 		var a = $("input[type='radio']");
