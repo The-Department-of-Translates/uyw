@@ -2,32 +2,32 @@
     <div id="page-signin" class="panel">
       <div>
         <form class="pure-form" onsubmit="onReactClick(); return false;">
-          <label class="text-signin">Choose An Answer</label>
+          <label class="text-signin">Выбери ответ</label>
           <div class="radioList">
             <ul id="answers"></ul>
           </div>
-          <label class="text-signin">Choose A Reaction</label>
+          <label class="text-signin">Выбери реакцию</label>
           <div class="radioList">
             <ul id="reactions">
               <li>
                 <input name="reaction" type="radio" id="Eww" disabled />
-                <label for="Eww">Eww!</label>
+                <label for="Eww">Фуу!</label>
               </li>
               <li>
                 <input name="reaction" type="radio" id="Lol" disabled />
-                <label for="Lol">LOL!</label>
+                <label for="Lol">Смешно!</label>
               </li>
               <li>
                 <input name="reaction" type="radio" id="Offensive" disabled />
-                <label for="Offensive">Offensive!</label>
+                <label for="Offensive">Оскорбительно!</label>
               </li>
             </ul>
           </div>
           <div class="pure-u-2-3 pull-right">
             <div style="margin-left:5px; margin-right:5px;">
               <section class="flat">
-                <button type="button" id="button-react" class="button-med" onclick="onReactClick()">REACT</button>
-                <button type="button" id="button-pass" class="button-med" style="margin-right: 60px" onclick="onPassClick()" disabled>PASS</button>
+                <button type="button" id="button-react" class="button-med" onclick="onReactClick()">ОТРЕАГИРОВАТЬ</button>
+                <button type="button" id="button-pass" class="button-med" style="margin-right: 60px" onclick="onPassClick()" disabled>ПРОПУСТИТЬ</button>
               </section>
             </div>
           </div>
