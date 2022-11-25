@@ -11,7 +11,7 @@ function loginButtonClick() {
 		isSpectator: $("#spectator").prop("checked"),
 		id: socket.id
 	});
-	goToWaiting("WAITING")
+	goToWaiting("ОЖИДАЕМ")
 }
 radio.click(function() {
 	if ($("#player").prop("checked") && $("#passwordGroup").is(":visible")) {
