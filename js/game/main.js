@@ -47,7 +47,7 @@ function getRandomTip() {
 }
 
 function connectSocket(a) {
-	socket = io("", {
+	socket = io("https://wordsgame.lol", {
 		timeout: 120000
 	});
 	socket.on("connect", function() {
