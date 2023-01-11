@@ -1,7 +1,11 @@
 function onVoteClick() {
 	var a = $("#votes input[type='radio']:checked");
 	if (a.length <= 0) {
-		alert("Ничего не выбрано!");
+		if(lang=='ru') {
+			alert("Ничего не выбрано!");
+		} else{
+			alert("Нічого не вибрано!");
+		}
 		return
 	}
 	$("#button-enter").prop("disabled", true);
@@ -11,7 +15,11 @@ function onVoteClick() {
 		userID: $.cookie("userID"),
 		id: socket.id
 	});
-	goToWaiting("ОЖИДАЕМ")
+	if(lang=='ru') {
+		goToWaiting("ОЖИДАЕМ");
+	} else{
+		goToWaiting("ОЧІКУВАННЯ");
+	}
 }
 
 function loadOptions(e) {

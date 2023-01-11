@@ -1,0 +1,31 @@
+<div class="row">
+    <div id="page-signin" class="panel">
+      <div>
+        <form class="pure-form" onsubmit="loginButtonClick(); return false;">
+          <div class="radioList" id="radioGroup">
+            <ul id="playerType">
+              <li>
+                <input name="radio" id="spectator" type="radio" />
+                <label for="spectator">Я - ГЛЯДАЧ</label>
+              </li>
+              <li>
+                <input name="radio" id="player" type="radio" />
+                <label for="player">Я - ГРАВЕЦЬ</label>
+              </li>
+            </ul>
+          </div>
+          <div id="passwordGrop" class="pure-control-group">
+            <label for="name" class="text-signin">ПАРОЛЬ</label>
+            <input id="password" class="inlineinput" type="password" placeholder="ВВЕСТИ ПАРОЛЬ" maxlength="25" value="" autocorrect="off" autocomplete="off" />
+          </div>
+          <div class="pure-u-2-3 pull-right">
+            <div class="section">
+              <section class="flat">
+                <button type="button" id="join" class="button-med pull-right">УВІЙТИ</button>
+              </section>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

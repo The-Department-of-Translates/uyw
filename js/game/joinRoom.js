@@ -23,7 +23,11 @@ function joinButtonClick() {
 			id: socket.id
 		})
 	}
-	goToWaiting("НАЧИНАЙТЕ, КОГДА ВСЕ ЗАЙДУТ!")
+	if(lang=='ru') {
+		goToWaiting("НАЧИНАЙТЕ, КОГДА ВСЕ ЗАЙДУТ!")
+	} else {
+		goToWaiting("ПОЧИНАЙТЕ, КОЛИ ВСІ ЗАЙДУТЬ!")
+	}
 }
 
 function loadOptions(k) {
@@ -41,10 +45,19 @@ function loadOptions(k) {
 				continue
 			}
 			d.push(l);
-			var f = '<li><input name="radio" id="' + l + '" type="radio" /><label for="' + l + '">' + g + " (" + j + " Очков)</label></li>";
+			if(lang=='ru') {
+				var f = '<li><input name="radio" id="' + l + '" type="radio" /><label for="' + l + '">' + g + " (" + j + " Очков)</label></li>";
+			} else {
+				var f = '<li><input name="radio" id="' + l + '" type="radio" /><label for="' + l + '">' + g + " (" + j + " Балів)</label></li>";
+			}
 			b.html(b.html() + f)
 		}
-		b.html(b.html() + '<li><input name="radio" id="newUser" type="radio" /><label for="newUser">Новый игрок</label></li>');
+		if(lang=='ru') {
+			text = '<li><input name="radio" id="newUser" type="radio" /><label for="newUser">Новый игрок</label></li>';
+		} else {
+			text = '<li><input name="radio" id="newUser" type="radio" /><label for="newUser">Новий гравець</label></li>';
+		}
+		b.html(b.html() + text);
 		nameInput.prop("disabled", true);
 		joinButton.prop("disabled", true);
 		var a = $("input[type='radio']");

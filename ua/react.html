@@ -1,0 +1,37 @@
+<div class="row">
+    <div id="page-signin" class="panel">
+      <div>
+        <form class="pure-form" onsubmit="onReactClick(); return false;">
+          <label class="text-signin">Обери відповідь</label>
+          <div class="radioList">
+            <ul id="answers"></ul>
+          </div>
+          <label class="text-signin">Вибери реакцію</label>
+          <div class="radioList">
+            <ul id="reactions">
+              <li>
+                <input name="reaction" type="radio" id="Eww" disabled />
+                <label for="Eww">Фууу!</label>
+              </li>
+              <li>
+                <input name="reaction" type="radio" id="Lol" disabled />
+                <label for="Lol">Смішно!</label>
+              </li>
+              <li>
+                <input name="reaction" type="radio" id="Offensive" disabled />
+                <label for="Offensive">Образливо!</label>
+              </li>
+            </ul>
+          </div>
+          <div class="pure-u-2-3 pull-right">
+            <div class="section">
+              <section class="flat">
+                <button type="button" id="button-react" class="button-med" onclick="onReactClick()">ВІДРЕАГУВАТИ</button>
+                <button type="button" id="button-pass" class="button-med" style="margin-right: 60px" onclick="onPassClick()" disabled>ПРОПУСТИТИ</button>
+              </section>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

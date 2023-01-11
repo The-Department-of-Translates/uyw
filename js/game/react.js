@@ -2,7 +2,11 @@ function onReactClick() {
 	var a = $("#answers input[name=answer]:checked");
 	var b = $("#reactions input[name=reaction]:checked");
 	if (a.length <= 0 || b.length <= 0) {
-		alert("Никак не отреагировали!");
+		if(lang=='ru') {
+			alert("Никак не отреагировали!");
+		} else{
+			alert("Ніяк не відреагували!");
+		}
 		return
 	}
 	$("#button-enter").prop("disabled", true);
@@ -13,13 +17,21 @@ function onReactClick() {
 		room: $.cookie("roomcode"),
 		id: socket.id
 	});
-	goToWaiting("ЖДЁМ СЛЕДУЮЩЕГО РАУНДА...")
+	if(lang=='ru') {
+		goToWaiting("ЖДЁМ СЛЕДУЮЩЕГО РАУНДА...")
+	} else{
+		goToWaiting("ЧЕКАЄМО НАСТУПНОГО РАУНДУ...")
+	}
 }
 
 function onPassClick() {
 	$("#button-enter").prop("disabled", true);
 	$("#button-pass").prop("disabled", true);
-	goToWaiting("ЖДЁМ СЛЕДУЮЩЕГО РАУНДА...")
+	if(lang=='ru') {
+		goToWaiting("ЖДЁМ СЛЕДУЮЩЕГО РАУНДА...")
+	} else{
+		goToWaiting("ЧЕКАЄМО НАСТУПНОГО РАУНДУ...")
+	}
 }
 
 function loadOptions(e) {

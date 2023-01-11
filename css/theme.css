@@ -45,10 +45,6 @@
     max-width: 100%;
     height: auto;
   }
-  .footer {
-    position: relative;
-    margin-top: 8%;
-  }
   @media (min-width: 1024px) {
     .panel {
       margin-left: 20%;
@@ -334,6 +330,12 @@
       transform: rotate(360deg);
     }
   }
+  .line {
+    display: inline-block;
+    position: relative;
+    margin-top: 8%;
+    width: 100%;
+  }
   .socketError {
     color: pink;
     font-weight: bold;
@@ -348,4 +350,41 @@
   .version {
     color: white;
     float: left;
+  }
+  .button-lang {
+    display: inline;
+    margin: 0 20px -40px 0;
+    padding: 10px 20px;
+    font-size: 14pt;
+    font-family: "BrandonGrotesque-Medium", sans-serif;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  div.lang p {
+    color: #fff;
+    background-color: #971782;
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: -7px -7px #440e62;
+    outline: 2px solid #440e62;
+    outline-offset: -7px;
+    cursor: pointer;
+    user-select: none;
+  }
+  div.lang p:hover,
+  div.lang p.hover {
+    background-color: #ba3fa6;
+  }
+  div.lang p:active,
+  div.lang p.active {
+    background-color: #751065;
+    box-shadow: -7px -7px #440e62;
+  }
+  div.lang p:disabled,
+  div.lang p.disabled {
+    background-color: #9b9b9b;
+    box-shadow: -7px -7px #4a4a4a;
+    outline: 2px solid #5a5a5a;
+    cursor: unset;
   }

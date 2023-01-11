@@ -11,7 +11,11 @@ function loginButtonClick() {
 		isSpectator: $("#spectator").prop("checked"),
 		id: socket.id
 	});
-	goToWaiting("ОЖИДАЕМ")
+	if(lang=='ru') {
+		goToWaiting("ОЖИДАЕМ");
+	} else{
+		goToWaiting("ОЧІКУВАННЯ");
+	}
 }
 radio.click(function() {
 	if ($("#player").prop("checked") && $("#passwordGroup").is(":visible")) {

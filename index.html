@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
-        <title>Своими Словами!</title>
+        <title class="lang-uyw">Своими Словами!</title>
         <meta name="description" content="">
         <link rel="icon" type="image/png" href="images/favicon.ico">
         <meta name="viewport" content="minimal-ui width=device-width, minimal-ui, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -11,32 +11,48 @@
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <link rel="stylesheet" href="css/theme.css">
+        <script src="https://wordsgame.lol/js/socket.io-1.4.5.js"></script>
+        <script async src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+        <!--
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-BHN125WNRK"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-BHN125WNRK');
+        </script>
+    --> 
     </head>
     <body>
-        <!--[if lte IE 9]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please 
-                <a href="http://browsehappy.com/">upgrade your browser</a> or 
-                <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> 
-                to improve your experience.</p><![endif]--> 
+        <script defer src="js/game/main.js"></script>
+        <!--
+        [if lte IE 9]>
+        <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please 
+            <a href="http://browsehappy.com/">upgrade your browser</a> or 
+            <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> 
+        to improve your experience.</p>
+        <![endif]
+        --> 
         <noscript>
-            <h3 style="color: white;">ОШИБКА: Javascript должен быть включён для воспроизведения. Пожалуйста, включите Javascript в настройках своего браузера и перезагрузите страницу.</h3>
+            <h3 style="color: white;" id="jserror"></h3>
         </noscript>
         <div id="header">
             <img src="img/logo.png" class="img-responsive center-block" vspace="30"/>
             <div id="container" class="container"></div>
             <div id="footer">
-                <div class="footer">
-                    <p class="version">ВЕРСИЯ 1.0.0-02ru</p>
-                    <p class="dyhp"><a href="http://www.smilingbuddhagames.com/help/#browser" target="_blank"></a>Есть проблема?</a></p>
+                <div class="line">
+                    <p class="lang-version version">ВЕРСИЯ 1.0.0-03ru</p>
+                    <p><a class="lang-dyhp dyhp" href="http://www.smilingbuddhagames.com/help/#browser" target="_blank">Есть проблема? (англ.)</a></p>
                 </div>
-                <p class="socketError" id="socketError">ОШИБКА: Невозможно связаться с сервером. Пожалуйста, проверьте подключение или состояние Wi-Fi.</p>
+                <p class="socketError lang-socketError" id="socketError">ОШИБКА: Невозможно связаться с сервером. Пожалуйста, проверьте подключение или состояние Wi-Fi.</p>
+                <div class="lang">
+                    <p class="button-lang" id="lang-ru">Русский</p>
+                    <p class="button-lang" id="lang-ua">Українською</p>
+                </div>
             </div>
         </div>
-        <script src="https://wordsgame.lol/js/socket.io-1.4.5.js"></script>
-        <script async src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2.3"></script>
-        <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script defer src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
-        <script defer src="js/game/main.js"></script>
-        <script defer src="https://github.com/mingchoi/Multi-Language/blob/master/jquery.MultiLanguage.min.js"></script>
     </body>
 </html>

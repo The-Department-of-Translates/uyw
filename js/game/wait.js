@@ -1,6 +1,11 @@
 function updateTip() {
 	var a = getRandomTip();
-	$("#tipText").html("<b>СОВЕТ:</b> " + a)
+	if (lang == 'ru') {
+		tip = "<b>СОВЕТ:</b> "
+	} else {
+		tip = "<b>ПОРАДА:</b> "
+	}
+	$("#tipText").html(tip + a)
 }
 
 function updateWaitingText(a) {

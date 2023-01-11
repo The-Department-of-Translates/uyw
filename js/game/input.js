@@ -2,7 +2,11 @@ function onEnterClick() {
 	var a = $("#answer").val();
 	a = a.trim();
 	if (a.length == 0) {
-		alert("Ответ не может быть пустым! ");
+		if(lang=='ru') {
+			alert("Ответ не может быть пустым! ")
+		} else{
+			alert("Відповідь не може бути порожньою! ")
+		}
 		return
 	}
 	$("#button-enter").prop("disabled", true);
@@ -13,7 +17,11 @@ function onEnterClick() {
 		userID: $.cookie("userID"),
 		id: socket.id
 	});
-	goToWaiting("ОЖИДАЕМ")
+	if(lang=='ru') {
+		goToWaiting("ОЖИДАЕМ")
+	} else{
+		goToWaiting("ОЧІКУВАННЯ");
+	}
 }
 
 function onPuntClick() {
@@ -24,7 +32,11 @@ function onPuntClick() {
 		userID: $.cookie("userID"),
 		id: socket.id
 	});
-	goToWaiting("ОЖИДАЕМ")
+	if(lang=='ru') {
+		goToWaiting("ОЖИДАЕМ")
+	} else{
+		goToWaiting("ОЧІКУВАННЯ");
+	}
 }
 
 function loadOptions(a) {
